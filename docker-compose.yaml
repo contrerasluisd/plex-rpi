@@ -12,7 +12,7 @@ services:
       - 139:139
       - 445:445
     volumes:
-      - /usr/share/zoneinfo/America/Argentina/Mendoza:/etc/localtime
+      - /usr/share/zoneinfo/America/Argentina/Buenos_Aires:/etc/localtime
       - ${MEDIA}:/media
       - ${STORAGE}/torrents:/downloads
 
@@ -55,7 +55,7 @@ services:
       - 5050:5050
     environment:
       - TORRENT_PLUGIN=transmission
-      - FG_WEBUI_PASSWD=123456
+      - FG_WEBUI_PASSWD=pi-transmission
     restart: unless-stopped
     links:
       - transmission

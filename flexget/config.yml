@@ -17,28 +17,14 @@ templates:
           propers: 12 hours
           quality: 720p
       tv:
-      - Black Mirror
-      - Brooklyn Nine-Nine
-      - Homeland
-      - Luther
-      - Mr Robot
       - Rick and Morty
-      - SEAL Team
-      - Sherlock
-      - Silicon Valley
-      - Suits
-      - The Flash
-      - The Good Fight
-      - The Walking Dead
-      - Tosh.0
-      - True Detective
       - Westworld
 
     transmission:
       host: transmission
       port: 9091
-      username: admin
-      password: "123456"
+      username: punk
+      password: "pi-transmission"
 
 tasks:
   eztvrss:
@@ -91,8 +77,8 @@ tasks:
     from_transmission:
       host: transmission
       port: 9091
-      username: admin
-      password: "123456"
+      username: punk
+      password: "transmission"
     disable: [seen, seen_info_hash]
     if:
       - transmission_progress == 100: accept
@@ -101,6 +87,6 @@ tasks:
     transmission:
       host: transmission
       port: 9091
-      username: admin
-      password: "123456"
+      username: punk
+      password: "transmission"
       action: purge
